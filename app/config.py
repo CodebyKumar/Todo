@@ -5,7 +5,7 @@ from typing import Optional
 class Settings(BaseSettings):
     database_url: str = "sqlite:///./todos.db"
     host: str = "0.0.0.0"
-    port: int = 8000
+    port: int = 5000
     debug: bool = True
     
     class Config:
