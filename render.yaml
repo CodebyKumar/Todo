@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: todo-api
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: DEBUG
+        value: false
+    # PORT is automatically set by Render

@@ -159,6 +159,38 @@ Configure the application using the `.env` file:
 - `PORT`: Server port (default: 8000)
 - `DEBUG`: Debug mode (default: True)
 
+## Deployment
+
+### Deploy to Render
+
+This project is configured for easy deployment to [Render](https://render.com):
+
+1. **Fork/Clone this repository**
+
+2. **Connect to Render:**
+   - Go to [Render Dashboard](https://dashboard.render.com)
+   - Click "New +" and select "Web Service"
+   - Connect your GitHub repository
+
+3. **Configure the service:**
+   - **Build Command:** `pip install -r requirements.txt`
+   - **Start Command:** `python main.py`
+   - **Environment:** `Python 3`
+
+4. **Set Environment Variables (optional):**
+   - `DEBUG=false` (for production)
+   - The `PORT` environment variable is automatically set by Render
+
+5. **Deploy:** Click "Create Web Service"
+
+The application will automatically use Render's `PORT` environment variable and deploy successfully.
+
+### Alternative Deployment Options
+
+The project includes both `render.yaml` and `Procfile` for flexible deployment options:
+- **render.yaml**: Native Render configuration
+- **Procfile**: Compatible with Heroku and other platforms
+
 ## Requirements
 
 - Python 3.8+
